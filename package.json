@@ -1,0 +1,12 @@
+{
+  "name": "alasmawi-profile",
+  "private": true,
+  "type": "module",
+  "description": "Builds the github.com/Alasmawi profile README and every image in it.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node profile/build.mjs",
+    "build:offline": "node profile/build.mjs --offline",
+    "fonts": "python3 profile/tools/fonts.py"
+  }
+}

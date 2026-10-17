@@ -1,0 +1,66 @@
+# Rebuilds the profile README and every image in it.
+#
+# Twice a day, and on any change to the generator: draw the contribution
+# snake, pull live numbers from the GitHub API, render all the cards in
+# profile/render, and commit whatever changed back to main.
+#
+# The default GITHUB_TOKEN only sees public activity. To count private
+# contributions too, add a PROFILE_TOKEN secret (a fine-grained token with
+# read access to your profile) and it's used instead.
+
+name: Build profile
+
+on:
+  schedule:
+    - cron: "17 3,15 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "profile/**"
+      - "package.json"
+      - ".github/workflows/profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Same palette as the cards: carmine on ink for dark mode, on bone for light.
+      - name: Draw the contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/generated/snake-dark.svg?color_snake=#ea5f70&color_dots=#15171c,#4a1019,#7a1222,#b0122b,#ea5f70&color_dot_border=#0e0f12
+            assets/generated/snake-light.svg?color_snake=#b0122b&color_dots=#e4ddcf,#e8a3ad,#d45366,#b0122b,#7d0d1f&color_dot_border=#efe9dd
+
+      - name: Render cards and README
+        run: node profile/build.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets/generated README.md profile/cache
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "chore(profile): rebuild cards [skip ci]"
+            git push
+          fi
