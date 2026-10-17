@@ -1,250 +1,113 @@
+<!--
+  Generated file. Edit profile/README.template.md and profile/content.mjs,
+  then run `npm run build`. The scheduled Action rebuilds this twice a day.
+-->
+
 <div align="center">
 
-<img src="./assets/banner.svg" alt="Abdulla Alasmawi — Full-Stack Developer | Cloud & DevOps | Bahrain" width="100%" />
+<a href="https://alasmawi.dev"><img src="./assets/generated/hero.svg" width="100%" alt="Abdulla Alasmawi. Software engineer working across full-stack development and AWS. Based in Manama, Bahrain." /></a>
 
 <br/>
 
-<a href="https://alasmawi.dev">
-  <img src="https://img.shields.io/badge/PORTFOLIO-alasmawi.dev-22d3ee?style=for-the-badge&labelColor=0b1219&logo=vercel&logoColor=22d3ee" alt="Portfolio" />
-</a>
-<a href="mailto:alasmawiabdulla0@gmail.com">
-  <img src="https://img.shields.io/badge/EMAIL-contact-5eead4?style=for-the-badge&labelColor=0b1219&logo=gmail&logoColor=5eead4" alt="Email" />
-</a>
-<a href="https://github.com/Alasmawi?tab=followers">
-  <img src="https://img.shields.io/github/followers/Alasmawi?style=for-the-badge&labelColor=0b1219&color=818cf8&logo=github&logoColor=818cf8" alt="Followers" />
-</a>
-<img src="https://komarev.com/ghpvc/?username=Alasmawi&style=for-the-badge&color=22d3ee&label=PROFILE+VIEWS" alt="Profile views" />
+<a href="https://alasmawi.dev"><img src="./assets/generated/btn-portfolio.svg" height="46" alt="alasmawi.dev" /></a>&nbsp;<a href="mailto:alasmawiabdulla0@gmail.com"><img src="./assets/generated/btn-email.svg" height="46" alt="Email" /></a>&nbsp;<a href="https://www.linkedin.com/in/alasmawi"><img src="./assets/generated/btn-linkedin.svg" height="46" alt="LinkedIn" /></a>&nbsp;<a href="https://alasmawi.dev/cv"><img src="./assets/generated/btn-cv.svg" height="46" alt="CV" /></a>
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&pause=1200&color=22D3EE&center=true&vCenter=true&width=760&lines=Full-stack+engineer+%E2%80%94+Go%2C+Rust%2C+Python%2C+JavaScript;I+build+the+app%2C+then+I+build+the+way+it+ships;From+a+Flask+API+on+Vagrant+to+ECS+Fargate+on+Terraform;CS+(Cloud+Computing)+%E2%80%94+University+of+Bahrain" alt="What I do" />
+<img src="./assets/generated/about.svg" width="100%" alt="01 · About. A terminal session: whoami, cat about.txt and cat profile.json." />
+
+<br/><br/>
+
+<img src="./assets/generated/focus.svg" width="100%" alt="02 · What I do. Full-stack products, cloud on AWS, applied AI and systems programming." />
+
+<br/><br/>
+
+<img src="./assets/generated/h-work.svg" width="100%" alt="03 · Selected work" />
+
+<a href="https://pavlov-k9.com/"><img src="./assets/generated/work-k9.svg" width="100%" alt="K9 Pavlov System: One place to see each police dog’s health, the conditions in its kennel and who is assigned to it, replacing paper records and separate checks." /></a>
+<br/><br/>
+<a href="https://alasmawi.dev/#projects"><img src="./assets/generated/work-bayyan.svg" width="100%" alt="Bayyan: One register of everything the security department owns, owes and needs to renew, flagging each renewal before it lapses." /></a>
+<br/><br/>
+<a href="https://github.com/Alasmawi/guidely"><img src="./assets/generated/work-guidely.svg" width="100%" alt="Guidely: Answers questions about a team’s own documents in a sentence, and shows the exact passages each answer came from." /></a>
+<br/><br/>
+<a href="https://github.com/Alasmawi/Brain-Book"><img src="./assets/generated/work-brainbook.svg" width="100%" alt="Brain-Book: A social platform where people post, join groups, share photos and message each other instantly." /></a>
+<br/><br/>
+<a href="https://github.com/Alasmawi/detecto"><img src="./assets/generated/work-detecto.svg" width="100%" alt="Detecto: Counts the people in an image, a video or a live webcam feed, and keeps every run for review." /></a>
+
+<br/><br/>
+
+<img src="./assets/generated/ladder.svg" width="100%" alt="04 · Five ways to ship. One backend drawn as five isometric platforms, one per deployment." />
 
 </div>
 
----
-
-```console
-➜  ~ whoami --verbose
-```
-
-I write software end to end, then I write the infrastructure that runs it.
-
-Most of my repos come in pairs: an application, and the pipeline, cluster or hardened box that actually puts it in front of users. I like the part of the job where a working prototype has to survive a deployment.
-
-```jsonc
-{
-  "name":      "Abdulla Alasmawi",
-  "alias":     "Yi",
-  "location":  "Kingdom of Bahrain",
-  "degree":    "BSc Computer Science — Cloud Computing, University of Bahrain",
-  "training":  "Reboot01 / 01Edu — Cloud DevOps specialization",
-  "languages": ["Go", "Rust", "Python", "JavaScript", "Shell", "HCL"],
-  "studying":  "AWS Solutions Architect Associate (SAA-C03)",
-  "speaks":    ["العربية", "English"],
-  "site":      "https://alasmawi.dev"
-}
-```
-
----
-
-## 🧭 One backend, five ways to ship it
-
-A single microservices backend, deployed five different ways — each repo is the same system one rung further up the ladder.
+| Rung | Repo | What it proves |
+|:--|:--|:--|
+| **01 · Build** | [`crud-master`](https://github.com/Alasmawi/crud-master) | A Flask CRUD API and a RabbitMQ billing consumer behind an API gateway, across three VMs. |
+| **02 · Containerize** | [`play-with-containers`](https://github.com/Alasmawi/play-with-containers) | Six images built from debian-slim by hand, one network, three volumes. |
+| **03 · Orchestrate** | [`orchestrator`](https://github.com/Alasmawi/orchestrator) | A two-node K3s cluster with StatefulSets and autoscaling, stood up by one script. |
+| **04 · Go to cloud** | [`cloud-design`](https://github.com/Alasmawi/cloud-design) | Terraform on AWS: ECS Fargate, RDS, Amazon MQ and an ALB, which is the only public piece. |
+| **05 · Automate** | [`code-keeper`](https://github.com/Alasmawi/code-keeper) | A self-hosted GitLab deployed by Ansible, with pipeline templates for the app and the infrastructure. |
 
 <div align="center">
 
-```mermaid
-graph LR
-    A["🐍 crud-master<br/><sub>Flask · RabbitMQ · Vagrant</sub>"]
-    B["🐳 play-with-containers<br/><sub>6 images · compose</sub>"]
-    C["☸️ orchestrator<br/><sub>K3s · StatefulSets · HPA</sub>"]
-    D["☁️ cloud-design<br/><sub>ECS Fargate · RDS · Terraform</sub>"]
-    E["🔁 code-keeper<br/><sub>GitLab · Ansible · CI/CD</sub>"]
-    A --> B --> C --> D --> E
-    style A fill:#0b1219,stroke:#22d3ee,color:#e2e8f0
-    style B fill:#0b1219,stroke:#22d3ee,color:#e2e8f0
-    style C fill:#0b1219,stroke:#5eead4,color:#e2e8f0
-    style D fill:#0b1219,stroke:#818cf8,color:#e2e8f0
-    style E fill:#0b1219,stroke:#818cf8,color:#e2e8f0
-```
+<br/>
+
+<img src="./assets/generated/experience.svg" width="100%" alt="05 · Experience. A 2026 timeline: AWS Cloud Innovation Center from February to June, then Bahrain Shura Council from July to today." />
 
 </div>
 
-| Stage | Repo | What it proves |
-|---|---|---|
-| **1 — Build** | [`crud-master`](https://github.com/Alasmawi/crud-master) | Flask CRUD API, RabbitMQ billing consumer, API gateway across three VMs |
-| **2 — Containerize** | [`play-with-containers`](https://github.com/Alasmawi/play-with-containers) | Six purpose-built `debian-slim` images, one network, three volumes — no base-image shortcuts |
-| **3 — Orchestrate** | [`orchestrator`](https://github.com/Alasmawi/orchestrator) | 2-node K3s cluster: StatefulSets, HPAs, secrets from `.env`, one script end to end |
-| **4 — Go to cloud** | [`cloud-design`](https://github.com/Alasmawi/cloud-design) | Terraform on AWS: ECS Fargate, RDS, Amazon MQ, ALB — only the load balancer is public |
-| **5 — Automate** | [`code-keeper`](https://github.com/Alasmawi/code-keeper) | Self-hosted GitLab deployed by Ansible, with app and infra pipeline templates |
-
----
-
-## 🚀 Selected work
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### [🧠 guidely](https://github.com/Alasmawi/guidely)
-Retrieval-augmented internal knowledge assistant with verified citations — FastAPI + FAISS + sentence-transformers, running against local Ollama or OpenAI. **264 tests.**
-
-`Python` `FastAPI` `FAISS` `RAG`
-
-</td>
-<td width="50%" valign="top">
-
-### [👁️ detecto](https://github.com/Alasmawi/detecto)
-Person detection and counting service: YOLOv8 on CPU behind FastAPI, SQLite store, React frontend. **91.55% accuracy, 108 ms mean inference, 129 tests.**
-
-`Python` `YOLOv8` `React` `FastAPI`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### [💣 bomberman-dom](https://github.com/Alasmawi/bomberman-dom)
-Real-time multiplayer Bomberman — WebSocket-authoritative server, DOM renderer, built on my own framework rather than React.
-
-`JavaScript` `WebSockets` `Game loop`
-
-</td>
-<td width="50%" valign="top">
-
-### [🁢 mini-framework](https://github.com/Alasmawi/mini-framework)
-**Domino** — a dependency-free JS framework: virtual DOM, delegated events, hash router, observable store, with a TodoMVC example.
-
-`JavaScript` `Virtual DOM` `Zero deps`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### [🌐 localhost](https://github.com/Alasmawi/localhost)
-Single-threaded HTTP/1.1 server for Linux built on `epoll` in Rust — no web framework, no async runtime.
-
-`Rust` `epoll` `HTTP/1.1`
-
-</td>
-<td width="50%" valign="top">
-
-### [🛡️ deep-in-system](https://github.com/Alasmawi/deep-in-system)
-Hardened Ubuntu 24.04 server: unattended install, custom partitioning, SSH lockdown, default-deny firewall, chrooted FTP, WordPress + nightly backups.
-
-`Shell` `Linux` `Hardening`
-
-</td>
-</tr>
-</table>
-
 <details>
-<summary><b>More — Rust systems, Go services, and the rest</b></summary>
-
+<summary><b>Network & Information Security Intern</b> · Bahrain Shura Council</summary>
 <br/>
 
-| Repo | Language | What it is |
-|---|---|---|
-| [`Brain-Book`](https://github.com/Alasmawi/Brain-Book) | Go | Full-stack social network — flagship application build |
-| [`real-time-forum`](https://github.com/Alasmawi/real-time-forum) | Go | Forum with live posting and private messaging |
-| [`Net-Cat`](https://github.com/Alasmawi/Net-Cat) | Go | TCP chat server in the spirit of classic Unix netcat/talk |
-| [`groupie-tracker`](https://github.com/Alasmawi/groupie-tracker) | Go | REST-consuming web app for bands, members and tour dates |
-| [`0-shell`](https://github.com/Alasmawi/0-shell) | Rust | Minimalist Unix-like shell with no external command execution |
-| [`rt`](https://github.com/Alasmawi/rt) | Rust | Dependency-free Whitted-style ray tracer → PPM output |
-| [`smart-road`](https://github.com/Alasmawi/smart-road) | Rust | SDL2 simulation: autonomous vehicles crossing via reservation scheduling |
-| [`multiplayer-fps`](https://github.com/Alasmawi/multiplayer-fps) | Rust | Multiplayer first-person shooter |
-| [`deep-in-net`](https://github.com/Alasmawi/deep-in-net) | — | Networking fundamentals: switching, DHCP/DNS/HTTP/FTP, routing, subnetting |
-| [`make-your-game`](https://github.com/Alasmawi/make-your-game) | JavaScript | Browser game, paired project |
-| [`portfolio`](https://github.com/Alasmawi/portfolio) | JavaScript | Source for [alasmawi.dev](https://alasmawi.dev) |
-
-Plus piscine collections in [Rust](https://github.com/Alasmawi/piscine-rust), [JavaScript](https://github.com/Alasmawi/piscine-js), [Go](https://github.com/Alasmawi/bh-piscine) and [Shell](https://github.com/Alasmawi/piscine-scripting).
+- Built Bayyan, the department’s bilingual English and Arabic register of its telecom, permit, contract and subscription obligations: a NestJS and Prisma API, a React front end and PostgreSQL, deployed on Linux behind nginx.
+- Moved a production MariaDB database off Amazon RDS to on-premises servers through an S3 snapshot, and sequenced the cutover so the restored copy matched the source with no data lost.
+- Traced a kernel version incompatibility that stopped the AWS Elastic Disaster Recovery agent from replicating a production EC2 instance from Ireland to Frankfurt, and worked the case with AWS Support until the agent installed.
+- Support staff with network, endpoint and infrastructure issues; run account lifecycle across Active Directory, Entra ID and Intune; and roll out PAM, BitLocker encryption policy and ManageEngine patching across the fleet.
+- Write the technical documentation and step-by-step procedures the department works from after handover.
 
 </details>
 
----
+<details>
+<summary><b>Cloud & IoT Intern</b> · AWS Cloud Innovation Center</summary>
+<br/>
 
-## 🛠️ Stack
+- Built the Ministry of Interior Police K9 Unit’s monitoring platform end to end: the dashboard, the serverless backend, and the ingestion pipeline between them.
+- Designed the backend on AWS: IoT Core and API Gateway take the data in, Lambda processes it, DynamoDB stores it, and Cognito keeps handlers and kennel staff to their own views.
+- Wired in Amazon Bedrock to flag sensor anomalies and turn them into plain care recommendations on the dashboard.
+- Demonstrated the finished system live to AWS mentors and Ministry of Interior stakeholders.
+
+</details>
 
 <div align="center">
 
-**Languages**
-
-<img src="https://skillicons.dev/icons?i=go,rust,python,js,ts,bash&theme=dark" alt="Languages" />
-
-**Application**
-
-<img src="https://skillicons.dev/icons?i=react,nodejs,flask,fastapi,postgres,mysql,sqlite,redis&theme=dark" alt="Application stack" />
-
-**Infrastructure**
-
-<img src="https://skillicons.dev/icons?i=docker,kubernetes,terraform,ansible,aws,linux,nginx,gitlab,githubactions,vagrant&theme=dark" alt="Infrastructure stack" />
-
 <br/>
 
-<img src="https://img.shields.io/badge/RabbitMQ-0b1219?style=flat-square&logo=rabbitmq&logoColor=22d3ee" />
-<img src="https://img.shields.io/badge/K3s-0b1219?style=flat-square&logo=k3s&logoColor=5eead4" />
-<img src="https://img.shields.io/badge/ECS_Fargate-0b1219?style=flat-square&logo=amazonecs&logoColor=818cf8" />
-<img src="https://img.shields.io/badge/YOLOv8-0b1219?style=flat-square&logo=pytorch&logoColor=22d3ee" />
-<img src="https://img.shields.io/badge/FAISS-0b1219?style=flat-square&logo=meta&logoColor=5eead4" />
-<img src="https://img.shields.io/badge/Microsoft_Entra_ID-0b1219?style=flat-square&logo=microsoftazure&logoColor=818cf8" />
-<img src="https://img.shields.io/badge/Intune-0b1219?style=flat-square&logo=microsoft&logoColor=22d3ee" />
-<img src="https://img.shields.io/badge/SDL2-0b1219?style=flat-square&logo=libretro&logoColor=5eead4" />
-
-</div>
-
----
-
-## 📊 GitHub in numbers
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Alasmawi&show_icons=true&hide_border=true&bg_color=0b1219&title_color=22d3ee&icon_color=5eead4&text_color=cbd5e1&include_all_commits=true&rank_icon=github" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alasmawi&layout=compact&hide_border=true&bg_color=0b1219&title_color=22d3ee&text_color=cbd5e1&langs_count=8" alt="Top languages" />
-
-<br/>
-
-<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=Alasmawi&hide_border=true&background=0b1219&stroke=1b2a35&ring=22d3ee&fire=818cf8&currStreakLabel=5eead4&sideLabels=cbd5e1&currStreakNum=ffffff&sideNums=ffffff&dates=64748b" alt="Streak" />
+<img src="./assets/generated/education.svg" width="100%" alt="University of Bahrain, 2022 to 2026, alongside Reboot Coding Institute, 2024 to 2026." />
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=Alasmawi&theme=darkhub&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8" alt="Trophies" />
+<img src="./assets/generated/more.svg" width="100%" alt="06 · More projects. A file listing of eleven more repositories." />
 
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alasmawi/Alasmawi/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Alasmawi/Alasmawi/output/github-snake.svg" />
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/Alasmawi/Alasmawi/output/github-snake.svg" />
-</picture>
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Alasmawi&bg_color=0b1219&color=22d3ee&line=5eead4&point=818cf8&area=true&area_color=22d3ee&hide_border=true" alt="Activity graph" width="100%" />
-
-</div>
-
----
-
-## 📡 Currently
-
-```console
-➜  ~ tail -f ~/now.log
-[ studying ] AWS Solutions Architect Associate — SAA-C03
-[ building ] Cloud DevOps track @ Reboot01 — CI/CD, containers, observability
-[ writing  ] Enterprise identity & endpoint management documentation (Entra ID, Intune)
-[ open to  ] Full-stack, platform and cloud engineering roles — Bahrain & the GCC
-```
-
-<div align="center">
-
-<br/>
-
-<a href="https://alasmawi.dev"><img src="https://img.shields.io/badge/Let's_build_something-22d3ee?style=for-the-badge&labelColor=0b1219" alt="Contact" /></a>
-<a href="mailto:alasmawiabdulla0@gmail.com"><img src="https://img.shields.io/badge/Get_in_touch-818cf8?style=for-the-badge&labelColor=0b1219" alt="Email" /></a>
+<sub>[`localhost`](https://github.com/Alasmawi/localhost) · [`0-shell`](https://github.com/Alasmawi/0-shell) · [`rt`](https://github.com/Alasmawi/rt) · [`smart-road`](https://github.com/Alasmawi/smart-road) · [`multiplayer-fps`](https://github.com/Alasmawi/multiplayer-fps) · [`bomberman-dom`](https://github.com/Alasmawi/bomberman-dom) · [`mini-framework`](https://github.com/Alasmawi/mini-framework) · [`real-time-forum`](https://github.com/Alasmawi/real-time-forum) · [`Net-Cat`](https://github.com/Alasmawi/Net-Cat) · [`groupie-tracker`](https://github.com/Alasmawi/groupie-tracker) · [`deep-in-system`](https://github.com/Alasmawi/deep-in-system)</sub>
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:22d3ee,50:5eead4,100:818cf8&section=footer" width="100%" alt="" />
+<img src="./assets/generated/stack.svg" width="100%" alt="07 · Stack. Languages, product, data, infrastructure, applied AI, AWS, and identity and endpoint tooling." />
+
+<br/><br/>
+
+<img src="./assets/generated/telemetry.svg" width="100%" alt="08 · Telemetry. GitHub numbers: contributions, commits, pull requests, streaks and language share, and the last year of contributions as an isometric city." />
+
+
+
+<br/><br/>
+
+<img src="./assets/generated/now.svg" width="100%" alt="What I'm doing now." />
+
+<br/><br/>
+
+<a href="mailto:alasmawiabdulla0@gmail.com"><img src="./assets/generated/footer.svg" width="100%" alt="Let's build something. alasmawiabdulla0@gmail.com" /></a>
+
+<sub>Every image above is generated by <a href="./profile"><code>profile/</code></a>, a dependency-free Node build, and redrawn by <a href="./.github/workflows/profile.yml">a scheduled Action</a>. Last build: 2026-10-17 14:25 UTC · 5d64473.</sub>
 
 </div>
