@@ -1,23 +1,23 @@
 {
- "fetchedAt": "2026-10-17T14:54:58.998Z",
+ "fetchedAt": "2026-10-17T15:09:11.856Z",
  "createdAt": "2024-02-21T12:20:12Z",
  "followers": 1,
  "repos": 32,
  "stars": 1,
- "lastYear": 269,
- "lifetime": 273,
+ "lastYear": 273,
+ "lifetime": 277,
  "years": {
   "2024": 2,
   "2025": 2,
-  "2026": 269
+  "2026": 273
  },
- "commits": 227,
- "prs": 11,
+ "commits": 230,
+ "prs": 12,
  "issues": 0,
  "reviews": 0,
  "contributedRepos": 22,
  "streak": {
-  "current": 0,
+  "current": 1,
   "longest": 6
  },
  "busiest": {
@@ -25,7 +25,7 @@
   "wd": 2,
   "n": 46
  },
- "activeDays": 31,
+ "activeDays": 32,
  "byWeekday": [
   24,
   55,
@@ -33,68 +33,68 @@
   69,
   20,
   2,
-  4
+  8
  ],
  "languages": [
   {
    "name": "JavaScript",
-   "share": 0.2648243336999276
+   "share": 0.2876893172735729
   },
   {
    "name": "Go",
-   "share": 0.23615490390457614
+   "share": 0.22857275123161194
   },
   {
    "name": "Rust",
-   "share": 0.2118259312350796
+   "share": 0.2050249013849175
   },
   {
    "name": "Python",
-   "share": 0.12998875190654488
+   "share": 0.12655431796258657
   },
   {
    "name": "Vue",
-   "share": 0.043254967444486
+   "share": 0.041866193543941846
   },
   {
    "name": "CSS",
-   "share": 0.03699941465422193
+   "share": 0.035811485857994284
   },
   {
    "name": "PHP",
-   "share": 0.023969701056542177
+   "share": 0.023200113256623144
   },
   {
    "name": "HTML",
-   "share": 0.01968430258344653
+   "share": 0.019052304750749302
   },
   {
    "name": "TypeScript",
-   "share": 0.012222464764547789
+   "share": 0.011830041857580874
   },
   {
    "name": "Shell",
-   "share": 0.009861338397987857
+   "share": 0.009544723447135426
   },
   {
    "name": "HCL",
-   "share": 0.008545770285846173
+   "share": 0.008271393874668412
   },
   {
    "name": "Dockerfile",
-   "share": 0.001424851195648698
+   "share": 0.0013791039377131636
   },
   {
    "name": "Makefile",
-   "share": 0.0010792052088822398
+   "share": 0.001044555500051676
   },
   {
    "name": "Jinja",
-   "share": 0.00011039537952235228
+   "share": 0.00010685094911633996
   },
   {
    "name": "Nix",
-   "share": 0.00005366828274008562
+   "share": 0.00005194517173665897
   }
  ],
  "weeks": [
@@ -2056,15 +2056,15 @@
    {
     "date": "2026-10-17",
     "wd": 6,
-    "n": 0
+    "n": 4
    }
   ]
  ],
  "recent": [
   {
    "name": "Alasmawi",
-   "pushedAt": "2026-10-17T02:55:00Z",
-   "lang": null
+   "pushedAt": "2026-10-17T15:08:59Z",
+   "lang": "JavaScript"
   },
   {
    "name": "portfolio",
