@@ -29,15 +29,15 @@
 
 <img src="./assets/generated/ladder.svg" width="100%" alt="04 · Five ways to ship. One backend drawn as five isometric platforms, one per deployment." />
 
-</div>
+<br/><br/>
 
-| Rung | Repo | What it proves |
-|:--|:--|:--|
-{{ladder_table}}
+{{rungs}}
 
-<div align="center">
+<br/><br/>
 
-<br/>
+<img src="./assets/generated/evolution.svg" width="100%" alt="What changed at each rung: where it runs, the way in, state, the queue, secrets and scaling." />
+
+<br/><br/>
 
 <img src="./assets/generated/experience.svg" width="100%" alt="05 · Experience. A 2026 timeline: AWS Cloud Innovation Center from February to June, then Bahrain Shura Council from July to today." />
 

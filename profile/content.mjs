@@ -191,13 +191,62 @@ export const EDUCATION = [
   },
 ];
 
-// One microservices backend, deployed five ways.
+// One microservices backend, deployed five ways. Facts and statuses come from
+// each repo's own "What's verified, and what isn't" section; keep them honest.
+//
+// status.level: 'verified' (ran end to end), 'partial' (some of it ran),
+// 'validated' (checked without running).
 export const LADDER = [
-  { n: '01', verb: 'Build', repo: 'crud-master', stack: 'Flask · RabbitMQ · Vagrant', proves: 'A Flask CRUD API and a RabbitMQ billing consumer behind an API gateway, across three VMs.' },
-  { n: '02', verb: 'Containerize', repo: 'play-with-containers', stack: 'Docker · Compose', proves: 'Six images built from debian-slim by hand, one network, three volumes.' },
-  { n: '03', verb: 'Orchestrate', repo: 'orchestrator', stack: 'K3s · StatefulSets · HPA', proves: 'A two-node K3s cluster with StatefulSets and autoscaling, stood up by one script.' },
-  { n: '04', verb: 'Go to cloud', repo: 'cloud-design', stack: 'Terraform · ECS Fargate · RDS', proves: 'Terraform on AWS: ECS Fargate, RDS, Amazon MQ and an ALB, which is the only public piece.' },
-  { n: '05', verb: 'Automate', repo: 'code-keeper', stack: 'GitLab · Ansible · CI/CD', proves: 'A self-hosted GitLab deployed by Ansible, with pipeline templates for the app and the infrastructure.' },
+  {
+    n: '01', verb: 'Build', repo: 'crud-master', stack: 'Flask · RabbitMQ · Vagrant',
+    proves: 'A Flask CRUD API and a RabbitMQ billing consumer behind an API gateway, across three VMs.',
+    delta: 'Three services, each in its own Vagrant VM. The gateway never calls billing directly: it publishes to RabbitMQ, so orders are accepted even while billing is down.',
+    entry: 'client -> gateway-vm :3000',
+    facts: ['newman: 18/18 assertions pass', 'queue holds orders while billing-app is stopped', 'apps kept alive by PM2'],
+    status: { label: 'verified', level: 'verified' },
+  },
+  {
+    n: '02', verb: 'Containerize', repo: 'play-with-containers', stack: 'Docker · Compose',
+    proves: 'Six images built from debian-slim by hand, one network, three volumes.',
+    delta: 'The same code in six images, each built from bare debian-slim: no official postgres or rabbitmq images. One bridge network, three volumes, and only the gateway published.',
+    entry: 'host :3000, the only published port',
+    facts: ['all six images build from debian-slim', 'full request flow through the gateway', 'killed containers restart on their own'],
+    status: { label: 'verified', level: 'verified' },
+  },
+  {
+    n: '03', verb: 'Orchestrate', repo: 'orchestrator', stack: 'K3s · StatefulSets · HPA',
+    proves: 'A two-node K3s cluster with StatefulSets and autoscaling, stood up by one script.',
+    delta: 'A two-node K3s cluster run by one script. Databases become StatefulSets with their own volumes, the gateway and inventory scale from 1 to 3 on CPU, and secrets come from .env at deploy time.',
+    entry: 'NodePort 30000 -> 3000',
+    facts: ['full request flow on a k3d cluster', 'HPAs reading real CPU metrics', 'PVCs bound and reattached'],
+    status: { label: 'verified on k3d', level: 'partial' },
+  },
+  {
+    n: '04', verb: 'Go to cloud', repo: 'cloud-design', stack: 'Terraform · ECS Fargate · RDS',
+    proves: 'Terraform for AWS: ECS Fargate, RDS, Amazon MQ and an ALB, which is the only public piece. Validated, not applied.',
+    delta: 'Terraform for AWS: Fargate tasks in private subnets, RDS for both databases, Amazon MQ for the queue. The load balancer is the only thing with a route from the internet.',
+    entry: 'ALB in the public subnet',
+    facts: ['terraform fmt, init and validate pass', 'security groups chained ALB -> tasks -> data', 'plan and apply not run: no AWS account'],
+    status: { label: 'validated, not applied', level: 'validated' },
+  },
+  {
+    n: '05', verb: 'Automate', repo: 'code-keeper', stack: 'GitLab · Ansible · CI/CD',
+    proves: 'A self-hosted GitLab deployed by Ansible, with pipeline templates for the app and the infrastructure.',
+    delta: 'A self-hosted GitLab stood up by Ansible, and the pipelines that ship the rest: build, test and scan on every push, with a manual approval before production for both the apps and the infrastructure.',
+    entry: 'push to a protected branch',
+    facts: ['GitLab CE 19.2.0 brought up by the playbook', 'playbook caught and fixed a real config bug', 'pipelines not yet run end to end'],
+    status: { label: 'playbook run', level: 'partial' },
+  },
+];
+
+// What changed rung by rung, one row per concern.
+export const EVOLUTION = [
+  ['runs on', ['3 Vagrant VMs, apps under PM2', '6 containers built from debian-slim', '2-node K3s, master and agent', 'ECS Fargate tasks in a VPC', 'GitLab CI on a Docker runner']],
+  ['way in', ['gateway-vm on :3000', 'host :3000, nothing else published', 'NodePort 30000 to 3000', 'an ALB, the only public resource', 'deploys from protected branches only']],
+  ['state', ['PostgreSQL on each VM', 'named volumes for both databases', 'StatefulSets with 1Gi PVCs', 'two RDS PostgreSQL instances', 'plan, approve, apply per environment']],
+  ['queue', ['RabbitMQ on billing-vm', 'rabbit-queue container', 'RabbitMQ Deployment', 'Amazon MQ, RabbitMQ engine, TLS', 'images pushed to the GitLab registry']],
+  ['secrets', ['.env forwarded by Vagrant', '.env injected by Compose', '.env turned into k8s Secrets', 'random_password into Secrets Manager', 'masked, protected CI variables']],
+  ['scaling', ['none; PM2 restarts crashes', 'restart: unless-stopped', 'HPA 1 to 3 at 60% CPU', 'Application Auto Scaling 1 to 3', 'manual approval before production']],
 ];
 
 // The "more projects" explorer, same order and words as the site.

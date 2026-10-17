@@ -4,7 +4,7 @@
 // sweeps up the rungs and a packet hops from one to the next.
 
 import { C } from '../lib/theme.mjs';
-import { svg, text, rect, line, label, delay, dot } from '../lib/svg.mjs';
+import { svg, text, rect, line, label, delay, dot, check } from '../lib/svg.mjs';
 import { project as iso, box, shade } from '../lib/iso.mjs';
 
 const W = 1000;
@@ -91,13 +91,16 @@ export function ladder({ steps }) {
   // Labels on the left, each with a leader to its rung.
   const lx = 38;
   steps.forEach((s, i) => {
-    const ly = 470 - i * 92;
+    const ly = 462 - i * 96;
     const [tx, ty] = P(0, tops[i].gy + A, tops[i].h * 0.6);
     o.push(`<g class="fu" style="${delay(0.5 + i * 0.1)}">`);
     o.push(text(s.n, { x: lx, y: ly, size: 12, face: 'm', fill: C.rose }));
     o.push(text(s.verb.toUpperCase(), { x: lx + 30, y: ly, size: 26, face: 't', fill: C.bone }));
     o.push(text(s.repo, { x: lx + 30, y: ly + 22, size: 13, face: 'mb', fill: C.soft }));
     o.push(text(s.stack, { x: lx + 30, y: ly + 40, size: 11.5, face: 'm', fill: C.muted }));
+    const ok = s.status.level === 'verified';
+    o.push(ok ? check(lx + 2, ly + 52, 9, C.rose) : rect(lx + 2, ly + 47, 8, 8, 'none', { stroke: C.amber, strokeDasharray: s.status.level === 'validated' ? '2 2' : undefined }));
+    o.push(text(s.status.label, { x: lx + 16, y: ly + 56, size: 10.5, face: 'm', fill: ok ? C.soft : C.amber }));
     o.push(`<path d="M${lx + 250} ${ly - 8}H${tx - 40}L${tx - 4} ${ty}" fill="none" stroke="${C.hair}" stroke-width="1"/>`);
     o.push(dot(tx - 4, ty, 2.5, C.rose));
     o.push('</g>');
@@ -105,7 +108,7 @@ export function ladder({ steps }) {
 
   // Legend for the cubes.
   const gx = 820, gy = 512;
-  [['gateway', C.bone], ['inventory api', C.soft], ['billing queue', C.amber]].forEach(([n, c], i) => {
+  [['api-gateway', C.bone], ['inventory', C.soft], ['billing', C.amber]].forEach(([n, c], i) => {
     o.push(rect(gx, gy + i * 18 - 8, 8, 8, c), text(n, { x: gx + 16, y: gy + i * 18, size: 11, face: 'm', fill: C.muted }));
   });
   o.push(label('on every rung', gx, gy - 22, C.dim, 9));

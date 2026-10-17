@@ -22,6 +22,7 @@ import { explorer } from './render/explorer.mjs';
 import { stack } from './render/stack.mjs';
 import { telemetry, city } from './render/telemetry.mjs';
 import { stackDocs, esc } from './lib/svg.mjs';
+import { rung, evolution } from './render/ship.mjs';
 
 const ROOT = new URL('../', import.meta.url);
 const OUT = new URL('assets/generated/', ROOT);
@@ -52,6 +53,8 @@ const cards = {
   'h-work': () => H('03', 'Selected work', 'Two systems built for government organizations in Bahrain, then personal and program projects.'),
   ...Object.fromEntries(content.FEATURED.map((p, i) => [`work-${p.id}`, () => project(p, i)])),
   ladder: () => stackDocs([H('04', 'Five ways to ship', 'One microservices backend, deployed five times. Each repo is the same system one rung further up.'), ladder({ steps: content.LADDER })]),
+  ...Object.fromEntries(content.LADDER.map((s, i) => [`rung-${s.n}`, () => rung(s, i, content.LADDER.length)])),
+  evolution: () => evolution({ steps: content.LADDER, rows: content.EVOLUTION }),
   experience: () => stackDocs([H('05', 'Experience', 'Two internships in 2026: cloud and IoT, then network and information security.'), experience({ roles: content.EXPERIENCE, today: nowDate })]),
   education: () => education({ schools: content.EDUCATION, today: nowDate }),
   more: () => stackDocs([H('06', 'More projects', 'A web server, a shell, a ray tracer, games and a front-end framework, each written without the library that usually does the work.'), explorer({ projects: content.MORE })]),
@@ -90,7 +93,7 @@ const vars = {
   ...Object.fromEntries(Object.entries(content.PERSON).map(([k, v]) => [`person.${k}`, v])),
   'build.date': build.date,
   'build.stamp': build.stamp,
-  ladder_table: content.LADDER.map((s) => `| **${s.n} · ${s.verb}** | [\`${s.repo}\`](https://github.com/${content.USER}/${s.repo}) | ${s.proves} |`).join('\n'),
+  rungs: content.LADDER.map((s) => `<a href="https://github.com/${content.USER}/${s.repo}"><img src="./assets/generated/rung-${s.n}.svg" width="100%" alt="${esc(`${s.n} ${s.verb}, ${s.repo}: ${s.delta} Status: ${s.status.label}.`)}" /></a>`).join('\n<br/><br/>\n'),
   more_links: content.MORE.map((p) => `[\`${p.name}\`](https://github.com/${content.USER}/${p.name})`).join(' · '),
   experience_details: content.EXPERIENCE.slice().reverse().map((r) => `<details>\n<summary><b>${r.role}</b> · ${r.org}</summary>\n<br/>\n\n${r.points.map((p) => `- ${p}`).join('\n')}\n\n</details>`).join('\n\n'),
   work_cards: content.FEATURED.map((p) => `<a href="${p.href}"><img src="./assets/generated/work-${p.id}.svg" width="100%" alt="${esc(`${p.name}: ${p.summary}`)}" /></a>`).join('\n<br/><br/>\n'),

@@ -96,7 +96,7 @@ export function about({ session }) {
     h: H,
     title: 'whoami',
     desc: session.map((s) => s.cmd ?? (s.out ? [].concat(s.out).join(' ') : s.json.map(([k, v]) => `${k}: ${[].concat(v).join(', ')}`).join('; '))).join(' — '),
-    body: chrome(H, 'yi@alasmawi: ~ — zsh') + rows.join(''),
+    body: chrome(H, 'abdulla@alasmawi: ~ — zsh') + rows.join(''),
     css: css.join(''),
   });
 }
