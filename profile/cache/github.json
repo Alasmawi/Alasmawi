@@ -1,23 +1,23 @@
 {
- "fetchedAt": "2026-11-03T10:49:41.297Z",
+ "fetchedAt": "2026-11-03T20:57:59.883Z",
  "createdAt": "2024-02-21T12:20:12Z",
  "followers": 1,
- "repos": 32,
+ "repos": 33,
  "stars": 1,
- "lastYear": 273,
- "lifetime": 277,
+ "lastYear": 293,
+ "lifetime": 297,
  "years": {
   "2024": 2,
   "2025": 2,
-  "2026": 273
+  "2026": 293
  },
- "commits": 230,
+ "commits": 249,
  "prs": 12,
  "issues": 0,
  "reviews": 0,
- "contributedRepos": 22,
+ "contributedRepos": 23,
  "streak": {
-  "current": 0,
+  "current": 4,
   "longest": 6
  },
  "busiest": {
@@ -25,76 +25,76 @@
   "wd": 2,
   "n": 46
  },
- "activeDays": 32,
+ "activeDays": 36,
  "byWeekday": [
-  24,
-  55,
-  95,
+  32,
+  59,
+  102,
   69,
   20,
   2,
-  8
+  9
  ],
  "languages": [
   {
    "name": "JavaScript",
-   "share": 0.2876893172735729
+   "share": 0.26328584483445416
   },
   {
    "name": "Go",
-   "share": 0.22857275123161194
+   "share": 0.20728671181198305
   },
   {
    "name": "Rust",
-   "share": 0.2050249013849175
+   "share": 0.18593177628855512
   },
   {
    "name": "Python",
-   "share": 0.12655431796258657
-  },
-  {
-   "name": "Vue",
-   "share": 0.041866193543941846
-  },
-  {
-   "name": "CSS",
-   "share": 0.035811485857994284
-  },
-  {
-   "name": "PHP",
-   "share": 0.023200113256623144
-  },
-  {
-   "name": "HTML",
-   "share": 0.019052304750749302
+   "share": 0.11476883528208012
   },
   {
    "name": "TypeScript",
-   "share": 0.011830041857580874
+   "share": 0.09060281299060384
+  },
+  {
+   "name": "CSS",
+   "share": 0.04313286430630082
+  },
+  {
+   "name": "Vue",
+   "share": 0.0379673672782373
+  },
+  {
+   "name": "PHP",
+   "share": 0.02103958221055838
+  },
+  {
+   "name": "HTML",
+   "share": 0.01748526723996532
   },
   {
    "name": "Shell",
-   "share": 0.009544723447135426
+   "share": 0.008655862642641236
   },
   {
    "name": "HCL",
-   "share": 0.008271393874668412
+   "share": 0.0075011130116924805
   },
   {
    "name": "Dockerfile",
-   "share": 0.0013791039377131636
+   "share": 0.0012506736649717646
   },
   {
    "name": "Makefile",
-   "share": 0.001044555500051676
+   "share": 0.0009472803461661629
   },
   {
    "name": "Jinja",
-   "share": 0.00010685094911633996
+   "share": 0.00009690036006904578
   },
   {
    "name": "Nix",
-   "share": 0.00005194517173665897
+   "share": 0.00004710773172122377
   }
  ],
  "weeks": [
@@ -2019,31 +2019,36 @@
    {
     "date": "2026-10-31",
     "wd": 6,
-    "n": 0
+    "n": 1
    }
   ],
   [
    {
     "date": "2026-11-01",
     "wd": 0,
-    "n": 0
+    "n": 8
    },
    {
     "date": "2026-11-02",
     "wd": 1,
-    "n": 0
+    "n": 4
    },
    {
     "date": "2026-11-03",
     "wd": 2,
-    "n": 0
+    "n": 7
    }
   ]
  ],
  "recent": [
   {
+   "name": "Barada-Cafe",
+   "pushedAt": "2026-11-03T16:13:07Z",
+   "lang": "TypeScript"
+  },
+  {
    "name": "Alasmawi",
-   "pushedAt": "2026-11-02T23:06:29Z",
+   "pushedAt": "2026-11-03T10:49:42Z",
    "lang": "JavaScript"
   },
   {
@@ -2065,11 +2070,6 @@
    "name": "cloud-design",
    "pushedAt": "2026-08-05T10:50:58Z",
    "lang": "HCL"
-  },
-  {
-   "name": "orchestrator",
-   "pushedAt": "2026-08-05T10:50:53Z",
-   "lang": "Python"
   }
  ]
 }
