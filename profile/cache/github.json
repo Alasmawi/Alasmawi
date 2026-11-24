@@ -1,23 +1,23 @@
 {
- "fetchedAt": "2026-11-24T02:11:26.146Z",
+ "fetchedAt": "2026-11-24T13:39:32.654Z",
  "createdAt": "2024-02-21T12:20:12Z",
  "followers": 2,
  "repos": 34,
  "stars": 1,
- "lastYear": 307,
- "lifetime": 311,
+ "lastYear": 310,
+ "lifetime": 314,
  "years": {
   "2024": 2,
   "2025": 2,
-  "2026": 307
+  "2026": 310
  },
- "commits": 262,
+ "commits": 265,
  "prs": 12,
  "issues": 0,
  "reviews": 0,
  "contributedRepos": 24,
  "streak": {
-  "current": 0,
+  "current": 1,
   "longest": 6
  },
  "busiest": {
@@ -25,11 +25,11 @@
   "wd": 2,
   "n": 46
  },
- "activeDays": 44,
+ "activeDays": 45,
  "byWeekday": [
   34,
   61,
-  108,
+  111,
   72,
   20,
   3,
@@ -38,67 +38,67 @@
  "languages": [
   {
    "name": "JavaScript",
-   "share": 0.25960240416682767
+   "share": 0.26000458945772387
   },
   {
    "name": "Go",
-   "share": 0.1964801846411969
+   "share": 0.1966501589753885
   },
   {
    "name": "Rust",
-   "share": 0.17623855102191435
+   "share": 0.176391014388251
   },
   {
    "name": "Python",
-   "share": 0.12713053541273697
+   "share": 0.12724051560311425
   },
   {
    "name": "TypeScript",
-   "share": 0.08587939511314387
+   "share": 0.08595368908345843
   },
   {
    "name": "CSS",
-   "share": 0.04300945161740349
+   "share": 0.04304665894655968
   },
   {
    "name": "Vue",
-   "share": 0.035988005540531505
+   "share": 0.03601913864075638
   },
   {
    "name": "PHP",
-   "share": 0.019942720695254802
+   "share": 0.019959973074563868
   },
   {
    "name": "HTML",
-   "share": 0.017052612144980172
+   "share": 0.01602466358834926
   },
   {
    "name": "C",
-   "share": 0.015274172789715915
+   "share": 0.015287386424235857
   },
   {
    "name": "Shell",
-   "share": 0.012905311002471121
+   "share": 0.012916475342779465
   },
   {
    "name": "HCL",
-   "share": 0.007110055713019532
+   "share": 0.007116206597843325
   },
   {
    "name": "Dockerfile",
-   "share": 0.0019804138000601066
+   "share": 0.001982127049249605
   },
   {
    "name": "Makefile",
-   "share": 0.0012696858568609654
+   "share": 0.0012707842577432049
   },
   {
    "name": "Jinja",
-   "share": 0.00009184863068035774
+   "share": 0.00009192808861589875
   },
   {
    "name": "Nix",
-   "share": 0.00004465185320228979
+   "share": 0.00004469048136742684
   }
  ],
  "weeks": [
@@ -2040,14 +2040,19 @@
    {
     "date": "2026-11-24",
     "wd": 2,
-    "n": 0
+    "n": 3
    }
   ]
  ],
  "recent": [
   {
+   "name": "portfolio",
+   "pushedAt": "2026-11-24T08:16:59Z",
+   "lang": "JavaScript"
+  },
+  {
    "name": "Alasmawi",
-   "pushedAt": "2026-11-23T12:32:21Z",
+   "pushedAt": "2026-11-24T02:11:27Z",
    "lang": "JavaScript"
   },
   {
@@ -2069,11 +2074,6 @@
    "name": "crud-master",
    "pushedAt": "2026-11-18T07:28:52Z",
    "lang": "Python"
-  },
-  {
-   "name": "Barada-Cafe",
-   "pushedAt": "2026-11-03T16:13:07Z",
-   "lang": "TypeScript"
   }
  ]
 }
